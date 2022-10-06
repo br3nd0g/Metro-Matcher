@@ -1,0 +1,17 @@
+
+/*colour palette*/
+:root{
+    --textclr: ;
+    --backgroundclr: ;
+    --backgroundclr2: ;
+    --highlightclr: ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
+*{
+    color: var(--textclr);
+    margin: 0;
+    padding: 0;
+    font-family: 'Metrophobic', sans-serif;
+}
