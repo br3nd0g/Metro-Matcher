@@ -1,10 +1,21 @@
-
 /*colour palette*/
-:root{
-    --textclr: ;
-    --backgroundclr: ;
-    --backgroundclr2: ;
-    --highlightclr: ;
+
+@media (prefers-color-scheme: light) {
+    :root{
+        --textclr: #4A4A48;
+        --backgroundclr: #D8DAD3;
+        --backgroundclr2: #aeb1aa;
+        --highlightclr: #D11141;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --textclr: #D8DAD3;
+        --backgroundclr: #4A4A48;
+        --backgroundclr2: #323231;
+        --highlightclr: #D11141;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
@@ -14,4 +25,16 @@
     margin: 0;
     padding: 0;
     font-family: 'Metrophobic', sans-serif;
+}
+
+body{
+    background-color: var(--backgroundclr);
+}
+
+header{
+    height: 150px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
