@@ -97,6 +97,7 @@ header>h1{
     font-size: 20px;
     padding: 3px 6px;
     margin-bottom: 20px;
+    transition: 0.2s;
 }
 
 #playStart>input{
@@ -105,7 +106,20 @@ header>h1{
     font-size: 38px;
     color: var(--textclr);
     border-radius: 12px;
-    border: 1px solid black;
+    border: 2px solid black;
+    background-color: var(--backgroundclr2);
+    transition: 0.2s;
+}
+
+#playStart>input:hover{
+    border-radius: 14px;
+    border: 2px solid var(--highlightclr);
+    background-color: var(--backgroundclr2);
+}
+
+#playStart>select:hover{
+    border-radius: 14px;
+    border: 2px solid var(--highlightclr);
     background-color: var(--backgroundclr2);
 }
 
