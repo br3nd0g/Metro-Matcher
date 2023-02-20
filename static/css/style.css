@@ -55,6 +55,8 @@ header>h1{
 
 #links>a:hover{
     transform: rotate(4.25deg) scale(1.2);
+    border-top: 1px solid var(--highlightclr);
+    border-bottom: 1px solid var(--highlightclr)
 }
 
 #primaryContent, #howToPlay{
@@ -63,6 +65,91 @@ header>h1{
 
 /*home page css*/
 
+#primaryContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0 50px 0;
+}
+
+#primaryContent>p{
+    width: 550px;
+    padding: 0 30px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#playStart{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+#playStart>select{
+    width: 100%;
+    color: var(--textclr);
+    background-color: var(--backgroundclr2);
+    border-radius: 7px;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 3px 6px;
+    margin-bottom: 20px;
+}
+
+#playStart>input{
+    width: 100%;
+    aspect-ratio: 9/4;
+    font-size: 38px;
+    color: var(--textclr);
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: var(--backgroundclr2);
+}
+
+#playStart>select *{
+    border: 1px solid black;
+    color: var(--textclr);
+    font-size: 20px;
+    background-color: var(--backgroundclr2);
+}
+
+#howToPlay>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+
+#howToPlay>h1{
+    margin-left: 105px;
+    font-size: 45px;
+}
+
+.evenHowTo{
+    flex-direction: row-reverse;
+    background-color: var(--backgroundclr2);
+}
+
+#howToPlay>div>p{
+    width: 30%;
+    font-size: 22px;
+}
+
+#howToPlay>div>img{
+    width: 350px;
+    aspect-ratio: 16 / 10;
+    transition: 0.2s;
+    border-radius: 8px;
+}
+
+#howToPlay>div>img:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 12px var(--highlightclr);
+    border-radius: 12px;
+}
 /*game page css*/
 
 /*leaderboard page css*/

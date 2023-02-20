@@ -19,14 +19,36 @@
         </header>
 
         <div id="primaryContent">
-            <p></p>
-            <div id="playStart">
-                <!-- dropdown and play button -->
-            </div>
+            <p>Welcome to Metro Matcher. A browser gamed, based on real life Metros. The aim is to draw the map of a metro which you don't know, using only the info of the metro's lines. Read below for a more in depth explanation, otherwise, select your metro to the right and click play!</p>
+           
+            <form method="post" id="playStart">
+                <select name="metro" id="metroSelect">
+                    <option value="singapore">Singapore</option>
+                    <option value="newYork">New York</option>
+                    <option value="london">London</option>
+                </select>
+                <input type="submit" class="formButton" value="Play"/>
+            </form>
         </div>
 
         <div id="howToPlay">
-            <!-- explain how to play sectiom kake look like wireframe lollll-->
+            <h1>How To Play</h1>
+            <div>
+                <p>You will be given the lines of the metro, along with the colours of the line, and the stops. You will also be told which stops change over with other lines, with the other line(s) specified. Using this info, you are to try draw the metro's map using the info.</p>
+                <img src="../static/images/feddy.png">
+            </div>
+            <div class="evenHowTo">
+                <p>On a canvas, you will be given the start and end of one line. You can select the colours of the lines to draw with, or use the erase tool to erase mistakes.</p>
+                <img src="../static/images/feddy.png">
+            </div>
+            <div>
+                <p>In this example here, it would be a good idea to draw a line from point to point, and then use the line's info to determine where other lines crossover.</p>
+                <img src="../static/images/feddy.png">
+            </div>
+            <div class="evenHowTo">
+                <p>From there, you can use the other lines' info and stops (perhaps even the names too!), to deduce the rest of the lines. Once you submit your solution, you will be given a score (0-100) of how close you managed to draw the map compared to the actual map.</p>
+                <img src="../static/images/feddy.png">
+            </div>
         </div>
 
         
