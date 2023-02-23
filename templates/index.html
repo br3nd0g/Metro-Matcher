@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <h1>Metro Matcher</h1>
+            <a href="{{ url_for('index') }}">Metro Matcher</a>
             <div id="links">
                 <a href="{{ url_for('index') }}">Home</a>
                 <a href="{{ url_for('leaderboard') }}">Leaderboard</a>
@@ -21,14 +21,14 @@
         <div id="primaryContent">
             <p>Welcome to Metro Matcher. A browser gamed, based on real life Metros. The aim is to draw the map of a metro which you don't know, using only the info of the metro's lines. Read below for a more in depth explanation, otherwise, select your metro to the right and click play!</p>
            
-            <form method="post" id="playStart">
-                <select name="metro" id="metroSelect">
+            <div id="playStart">
+                <select name="metro">
                     <option value="singapore">Singapore</option>
                     <option value="newYork">New York</option>
                     <option value="london">London</option>
                 </select>
-                <input type="submit" class="formButton" value="Play"/>
-            </form>
+                <button class="formButton" onClick="redirectToGame()">Play</button>
+            </div>
         </div>
 
         <div id="howToPlay">

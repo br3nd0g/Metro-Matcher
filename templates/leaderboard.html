@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Metro Matcher</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <script src="../static/js/script.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            <a href="{{ url_for('index') }}">Metro Matcher</a>
+            <div id="links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('leaderboard') }}">Leaderboard</a>
+            </div>  
+        </header>
+
+        <div id="leaderboard">
+            <div id="leaderboardHeader">
+                <h2>Leaderboard for: </h2>
+                <select name="metro" id="leadMetroSelect">
+                    <option value="singapore">Singapore</option>
+                    <option value="newYork">New York</option>
+                    <option value="london">London</option>
+                </select>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+
+                <!-- rest of data put in dynamically, using
+                <tr>
+                    <td>Name</td>
+                    <td>Score</td>
+                </tr>
+                
+                and putting things in where they should be MAX 25 times
+                -->
+            </table>
+        </div>
+        
+
+        
+    </body>
+</html>
