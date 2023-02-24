@@ -16,7 +16,7 @@ def game():
     city = request.args.get('city')
     if city == None: return redirect(url_for("index"))
 
-    return render_template('index.html')
+    return render_template('game.html')
 
 
 app.run(host='0.0.0.0', port=81, debug=True)

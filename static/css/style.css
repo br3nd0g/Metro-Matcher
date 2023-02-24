@@ -178,22 +178,25 @@ header>a{
 }
 
 #leaderboardHeader{
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #leaderboardHeader>h2{
-
+    margin-right: 15px;
+    font-size: 28px;
 }
 
 #leaderboardHeader>select{
-    width: 100%;
+    width: 195px;
     color: var(--textclr);
     background-color: var(--backgroundclr2);
     border-radius: 7px;
     border: 2px solid black;
     font-size: 20px;
     padding: 3px 6px;
-    margin-bottom: 20px;
     transition: 0.2s;
 }
 
@@ -210,14 +213,16 @@ header>a{
     background-color: var(--backgroundclr2);
 }
 
-#leaderboard>table{
-
+#leaderTable{
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 28%;
+    min-width:323px;
 }
 
-#leaderboard>table>tr{
-
-}
-
-#leaderboard>table>tr>td, #leaderboard>table>tr>th{
-    
+#leaderTable>tbody>tr>td, #leaderTable>tbody>tr>th, #fart{
+    border: 2px solid black;
+    text-align: center;
+    padding: 8px;
+    background-color: var(--backgroundclr2);
 }
