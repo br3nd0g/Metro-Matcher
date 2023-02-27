@@ -18,8 +18,6 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
-
 *{
     color: var(--textclr);
     margin: 0;
@@ -116,6 +114,7 @@ header>a{
     border-radius: 14px;
     border: 2px solid var(--highlightclr);
     background-color: var(--backgroundclr2);
+    cursor: pointer;
 }
 
 #playStart>select:hover{
@@ -166,6 +165,125 @@ header>a{
     border-radius: 12px;
 }
 /*game page css*/
+
+#game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+}
+
+#gameCanvas{
+    border: 3px solid black;
+    aspect-ratio: 16/9;
+    width: 688px;
+}
+
+#toolbar{
+    margin-top: 10px;
+    width: 688px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#colours{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#colours>img{
+    width: 30px;
+    aspect-ratio: 1;
+}
+
+#colours>*{
+    margin: 0 3px;
+}
+
+#colours>*:hover{
+    cursor: pointer;
+}
+
+#colours>div{
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius:50%;
+    background-color: rgb(14, 80, 18);
+    border: 1px solid black;
+}
+
+#submitArea{
+    height: 100%;
+}
+
+#submitArea>button, #submitArea>input{
+    color: var(--textclr);
+    background-color: var(--backgroundclr2);
+    border-radius: 7px;
+    border: 2px solid black;
+    transition: 0.2s;
+    height: 26px;
+}
+
+#submitArea>input{
+    padding: 0 5px;
+    width: calc(175px - 5px);
+    box-sizing: border-box
+}
+
+#submitArea>button{
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+#submitArea>button:hover, #submitArea>input:hover{
+    border-radius: 14px;
+    border: 2px solid var(--highlightclr);
+}
+
+#linesInfo{
+    margin-top: 50px;
+    width: calc(100% - 16%);
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#linesInfo>h1{
+    width: 100%;
+    text-align: left;
+    margin: 0 0 40px 35px;
+}
+
+.metroLine{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.metroName{
+    width: 100%;
+    text-align: left;
+}
+
+.actualLine{
+    height: 10px;
+    width: 100%;
+    background-color: rgb(163, 12, 12);
+}
 
 /*leaderboard page css*/
 

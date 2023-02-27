@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/css/style.css">
         <script src="../static/js/script.js" async defer></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+        </style>
     </head>
     <body>
         <header>
@@ -17,6 +20,58 @@
                 <a href="{{ url_for('leaderboard') }}">Leaderboard</a>
             </div>  
         </header>
+
+        <div id="game">
+
+            <canvas id="gameCanvas">Your browser does not support the HTML canvas tag.</canvas>
+
+            <div id="toolbar">
+
+                <div id="colours">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <img src="../static/images/erase.png">
+                </div>
+
+                <div id="submitArea">
+                    <input type="text" maxlength="30">
+                    <button>Submit</button>
+                    <!-- when submitted call function that screenshots canvas and sends the data in a POST request to the server, then in flask redirect to leaderboard with popup of how close they were -->
+                </div>
+            </div>
+
+            <div id="linesInfo">
+
+                <h1>Line Info</h1>
+
+                <div class="metroLine">
+                    <h4 class="metroName">Lorem Ipsum</h4>
+                    <div class="actualLine"></div>
+                </div>
+
+                <div class="metroLine">
+                    <h4 class="metroName">Lorem Ipsum</h4>
+                    <div class="actualLine"></div>
+                </div>
+
+                <div class="metroLine">
+                    <h4 class="metroName">Lorem Ipsum</h4>
+                    <div class="actualLine"></div>
+                </div>
+
+                <div class="metroLine">
+                    <h4 class="metroName">Lorem Ipsum</h4>
+                    <div class="actualLine"></div>
+                </div>
+
+            </div>
+        </div>
 
         
     </body>
