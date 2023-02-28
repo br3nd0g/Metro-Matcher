@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+
+#creating flask app and setting up url endpoints
+
 app = Flask("Metro Matcher")
 app.static_folder = 'static'
 
@@ -18,5 +21,5 @@ def game():
 
     return render_template('game.html')
 
-
+#running flask app
 app.run(host='0.0.0.0', port=81, debug=True)

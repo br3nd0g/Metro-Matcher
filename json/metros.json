@@ -1,0 +1,32 @@
+{
+    "singapore":[
+        {
+            "name":"Circle Line",
+            "colour": "#FF8800",
+            "stops": [
+                []
+            ]
+    
+        }
+    ],
+    "newYork":[
+        {
+            "name":"Circle Line",
+            "colour": "#FF8800",
+            "stops": [
+                []
+            ]
+    
+        }
+    ],
+    "london":[
+        {
+            "name":"Circle Line",
+            "colour": "#FF8800",
+            "stops": [
+                []
+            ]
+    
+        }
+    ]
+}
