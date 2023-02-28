@@ -1,4 +1,5 @@
-{
-    "brendog":99,
-    "fart man": 52
+{   "scores": [
+        {"name": "brendog", "score": 99},
+        {"name": "fartguy", "score": 56}
+    ]
 }
