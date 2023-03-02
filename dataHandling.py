@@ -24,7 +24,8 @@ def getMetroInfo(metroName):
     metro = metroInfo(metroName)
 
     for line in chosenMetroJson:
-        lineInfo = lineInfo(line["colour"], line["name"], line["stops"])
-        metro.lines.append(lineInfo)
+        
+        lineRecord = lineInfo(line["colour"], line["name"], line["stops"])
+        metro.lines.append(lineRecord)
 
     return metro

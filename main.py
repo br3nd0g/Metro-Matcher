@@ -23,10 +23,9 @@ def game():
     if city == None: return redirect(url_for("index"))
 
     metroInfo = dh.getMetroInfo(city)
-    #metroInfo = dp.prepForJs(metroInfo)
-    #send to data prep lololol
+    metroInfo = dp.prepForJs(metroInfo)
 
-    return render_template('game.html')
+    return render_template('game.html', metroinfo=metroInfo, metroname=city)
 
 #running flask app
 app.run(host='0.0.0.0', port=81, debug=True)

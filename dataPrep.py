@@ -1,4 +1,18 @@
-#literally turn it back to json for js and prepare it so js can read it LMAO!!!
+import json
 
 def prepForJs(metroRecord):
-    return
+
+    metroJson = []
+
+    for line in metroRecord.lines:
+
+        lineDict = {}
+        lineDict["name"] = line.name
+        lineDict["colour"] = line.colour
+        lineDict["stops"] = line.stops
+
+        metroJson.append(lineDict)
+
+    metroJson = json.dumps(metroJson)
+
+    return metroJson
