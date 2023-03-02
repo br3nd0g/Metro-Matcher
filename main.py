@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
+import dataHandling as dh
+import dataPrep as dp
+import scoreCalculation as sc
 
 
 #creating flask app and setting up url endpoints
@@ -18,6 +21,10 @@ def leaderboard():
 def game():
     city = request.args.get('city')
     if city == None: return redirect(url_for("index"))
+
+    metroInfo = dh.getMetroInfo(city)
+    #metroInfo = dp.prepForJs(metroInfo)
+    #send to data prep lololol
 
     return render_template('game.html')
 
