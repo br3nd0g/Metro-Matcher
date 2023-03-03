@@ -10,16 +10,36 @@ for(let line of linesObj){
 
     coloursArea.insertAdjacentHTML('afterbegin', colourHtml)
 
+    let stopHtml;
+
     let lineHtml = `<div class="metroLine">
         <h4 class="metroName">${line.name}</h4>
         <div class="actualLine" style="background-color: ${line.colour}">`
 
-    for(let stop in line.stops){
+    for(let i = 0; i < line.stops.length; i++){
 
-        let stopHtml = `<div style="background: linear-gradient(to bottom right, red, blue);" class="lineStop"></div>`
+        console.log(line.stops[i])
+
+        if(line.stops[i].length === 1){
+            stopHtml = `<div style="background-color: ${line.stops[i][0]};" class="lineStop"></div>`
+        }
+        else{
+
+            let percentage = 100/line.stops[i].length
+
+            let gradientStatement = ""
+            let gradientProgress = 0
+
+            for(let c = 0; c < line.stops[i].length; c++){
+                gradientStatement += `, ${line.stops[i][c]} ${gradientProgress}%`
+                gradientProgress += percentage
+                gradientStatement += `, ${line.stops[i][c]} ${gradientProgress}%`
+            }
+
+            stopHtml = `<div style="background: linear-gradient(to bottom right${gradientStatement});" class="lineStop"></div>`
+        }
 
         lineHtml += stopHtml
-
 
     }
         
