@@ -281,6 +281,17 @@ header>a{
 .actualLine{
     height: 10px;
     width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.lineStop{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 23px;
 }
 
 /*leaderboard page css*/
