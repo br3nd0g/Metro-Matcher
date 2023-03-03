@@ -215,7 +215,6 @@ header>a{
     width: 30px;
     aspect-ratio: 1;
     border-radius:50%;
-    background-color: rgb(14, 80, 18);
     border: 1px solid black;
 }
 
@@ -282,7 +281,6 @@ header>a{
 .actualLine{
     height: 10px;
     width: 100%;
-    background-color: rgb(163, 12, 12);
 }
 
 /*leaderboard page css*/
