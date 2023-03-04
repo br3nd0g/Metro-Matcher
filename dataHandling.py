@@ -29,3 +29,17 @@ def getMetroInfo(metroName):
         metro.lines.append(lineRecord)
 
     return metro
+
+def getLeaderInfo():
+
+    leaderboard = []
+
+    leaderJson = ji.getJsonData("leaderboard")
+    leaderData = leaderJson["scores"]
+
+    for data in leaderData:
+
+        log = leaderboardLog(data["name"], data["score"])
+        leaderboard.append(log)
+
+    return leaderboard
