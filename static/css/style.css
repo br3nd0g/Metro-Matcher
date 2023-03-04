@@ -292,6 +292,7 @@ header>a{
     border-radius: 50%;
     aspect-ratio: 1;
     width: 23px;
+    border: 1px solid var(--backgroundclr2);
 }
 
 /*leaderboard page css*/
