@@ -32,14 +32,40 @@ def getMetroInfo(metroName):
 
 def getLeaderInfo():
 
-    leaderboard = []
+    leaderboards = {}
 
     leaderJson = ji.getJsonData("leaderboard")
-    leaderData = leaderJson["scores"]
 
-    for data in leaderData:
+    for city in leaderJson:
+        leaderboards[city] = []
 
-        log = leaderboardLog(data["name"], data["score"])
-        leaderboard.append(log)
 
-    return leaderboard
+        for data in leaderJson[city]:
+
+            log = leaderboardLog(data["name"], data["score"])
+            leaderboards[city].append(log)
+
+    return leaderboards
+
+def sortLeaderboard(leaderboardDict):
+
+    for city in leaderboardDict:
+
+
+
+        for outer in range (len(leaderboardDict[city])-1,0,-1):
+            for inner in range(outer):
+
+                if leaderboardDict[city][inner].score > leaderboardDict[city][inner+1].score:
+
+                    temp = leaderboardDict[city][inner]
+
+                    leaderboardDict[city][inner] = leaderboardDict[city][inner+1]
+                    leaderboardDict[city][inner+1] = temp
+
+        leaderboardDict[city] = leaderboardDict[city][::-1]
+
+        if len(leaderboardDict[city]) > 25:
+            leaderboardDict[city] = leaderboardDict[city][0:25]
+    
+    return leaderboardDict

@@ -347,7 +347,7 @@ header>a{
     min-width:323px;
 }
 
-#leaderTable>tbody>tr>td, #leaderTable>tbody>tr>th, #fart{
+#leaderTable>tbody>tr>td, #leaderTable>tbody>tr>th{
     border: 2px solid black;
     text-align: center;
     padding: 8px;

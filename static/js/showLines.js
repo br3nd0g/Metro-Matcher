@@ -3,7 +3,6 @@ const linesArea = document.getElementById("linesInfo")
 
 jsonString = linesFromFlask;
 const linesObj = JSON.parse(jsonString)
-console.log(linesObj)
 
 for(let line of linesObj){
     let colourHtml = `<div style="background-color: ${line.colour}"></div>`

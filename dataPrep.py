@@ -1,6 +1,6 @@
 import json
 
-def prepForJs(metroRecord):
+def prepMetroForJs(metroRecord):
 
     metroJson = []
 
@@ -16,3 +16,19 @@ def prepForJs(metroRecord):
     metroJson = json.dumps(metroJson)
 
     return metroJson
+
+def prepLeaderForJs(leaderboardDict):
+
+    dataForJs = {}
+
+    for city in leaderboardDict:
+        dataForJs[city] = []
+
+    for city in leaderboardDict:
+
+        for leaderLog in leaderboardDict[city]:
+            dataForJs[city].append({"name": leaderLog.name, "score": leaderLog.score})
+
+    dataForJs = json.dumps(dataForJs)
+
+    return dataForJs

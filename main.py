@@ -3,6 +3,7 @@ import dataHandling as dh
 import dataPrep as dp
 import scoreCalculation as sc
 
+acceptedCities = ["newYork", "london", "singapore"]
 
 #creating flask app and setting up url endpoints
 
@@ -15,15 +16,20 @@ def index():
 
 @app.route('/leaderboard')
 def leaderboard():
-    return render_template('leaderboard.html')
+
+    leaderboardInfo = dh.getLeaderInfo()
+    sortedLeaderboard = dh.sortLeaderboard(leaderboardInfo)
+    readyLeaderInfo = dp.prepLeaderForJs(sortedLeaderboard)
+
+    return render_template('leaderboard.html', leaderboardinfo=readyLeaderInfo)
 
 @app.route('/game')
 def game():
     city = request.args.get('city')
-    if city == None: return redirect(url_for("index"))
+    if city not in acceptedCities: return redirect(url_for("index"))
 
     metroInfo = dh.getMetroInfo(city)
-    metroInfo = dp.prepForJs(metroInfo)
+    metroInfo = dp.prepMetroForJs(metroInfo)
 
     return render_template('game.html', metroinfo=metroInfo, metroname=city)
 

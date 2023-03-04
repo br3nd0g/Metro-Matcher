@@ -34,30 +34,16 @@
 
             <table id="leaderTable">
                 <tr>
-                    <th id="fart">Name</th>
+                    <th>Name</th>
                     <th>Score</th>
                 </tr>
-                <tr>
-                    <td>fart</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>hhh</td>
-                    <td>16</td>
-                </tr>
-
-                <!-- rest of data put in dynamically, using
-                <tr>
-                    <td>Name</td>
-                    <td>Score</td>
-                </tr>
-                
-                and putting things in where they should be MAX 25 times
-                -->
             </table>
         </div>
         
 
+        <script>
+            const leaderFromFlask = `{{ leaderboardinfo | safe }}`;
+        </script>
         
     </body>
 </html>
