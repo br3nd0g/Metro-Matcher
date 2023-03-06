@@ -17,8 +17,6 @@ for(let line of linesObj){
 
     for(let i = 0; i < line.stops.length; i++){
 
-        console.log(line.stops[i])
-
         if(line.stops[i].length === 1){
             stopHtml = `<div style="background-color: ${line.stops[i][0]};" class="lineStop"></div>`
         }
