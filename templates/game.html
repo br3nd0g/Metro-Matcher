@@ -29,11 +29,11 @@
             <div id="toolbar">
 
                 <div id="colours">
-                    <img src="../static/images/erase.png">
+                    <img id="eraser" src="../static/images/erase.png" onclick="enableErasing()">
                 </div>
 
                 <div id="submitArea">
-                    <input type="text" maxlength="30">
+                    <input type="text" maxlength="30" placeholder="Name">
                     <button>Submit</button>
                     <!-- when submitted call function that screenshots canvas and sends the data in a POST request to the server, then in flask redirect to leaderboard with popup of how close they were -->
                 </div>

@@ -5,7 +5,7 @@ jsonString = linesFromFlask;
 const linesObj = JSON.parse(jsonString)
 
 for(let line of linesObj){
-    let colourHtml = `<div style="background-color: ${line.colour}"></div>`
+    let colourHtml = `<div class="colourSelector" style="background-color: ${line.colour}"></div>`
 
     coloursArea.insertAdjacentHTML('afterbegin', colourHtml)
 

@@ -198,7 +198,7 @@ header>a{
     justify-content: space-evenly;
 }
 
-#colours>img{
+#eraser{
     width: 30px;
     aspect-ratio: 1;
 }
@@ -211,7 +211,7 @@ header>a{
     cursor: pointer;
 }
 
-#colours>div{
+.colourSelector{
     width: 30px;
     aspect-ratio: 1;
     border-radius:50%;
