@@ -3,17 +3,36 @@ const ctx = canvas.getContext("2d");
 const colourSelectors = document.querySelectorAll('.colourSelector');
 const eraserIcon = document.getElementById("eraser")
 let activeColourSelector = document.getElementById("colours").firstChild
-activeColourSelector.style.border = "1px solid var(--highlightclr)";
+activeColourSelector.style.border = "2px solid var(--highlightclr)";
 
 
 canvas.width = canvas.getBoundingClientRect().width;
 canvas.height = canvas.getBoundingClientRect().height;
 
-ctx.lineWidth = 10;
+ctx.lineWidth = 15;
 ctx.strokeStyle = activeColourSelector.style.backgroundColor
 ctx.lineCap = "round";
 
+//drawing begin and end of a line
+
+function drawPoint(x,y){
+    ctx.beginPath()
+    ctx.moveTo(x, y);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+}
+
+function getRelativeCoord(percentage, widOrHei){
+
+    return ((canvas[widOrHei] / 100) * percentage)
+}
+
+drawPoint(getRelativeCoord(lineEnds[metroName][0][0], "width"), getRelativeCoord(lineEnds[metroName][0][1], "height"))
+drawPoint(getRelativeCoord(lineEnds[metroName][1][0], "width"), getRelativeCoord(lineEnds[metroName][1][1], "height"))
+
 let painting = false;
+ctx.lineWidth = 10;
 
 function getMousePos(e) {
     var rect = canvas.getBoundingClientRect();
@@ -27,10 +46,10 @@ function changeColour(clickedColour){
     if(erasing===true){
         disableErasing()
     }
-    activeColourSelector.style.border = "1px solid #000000"
+    activeColourSelector.style.border = "2px solid #000000"
     activeColourSelector = clickedColour
     ctx.strokeStyle = activeColourSelector.style.backgroundColor;
-    activeColourSelector.style.border = "1px solid var(--highlightclr)"
+    activeColourSelector.style.border = "2px solid var(--highlightclr)"
 }
 
 function startPosition(e){
@@ -57,12 +76,14 @@ let erasing = false;
 function enableErasing(){
     erasing = true
     ctx.globalCompositeOperation = 'destination-out'
-    colourSelectors.forEach(el => el.style.border = "1px solid #000000");
-    eraserIcon.style.filter = "drop-shadow(0 0 1px var(--highlightclr))"
+    ctx.lineWidth = 18
+    colourSelectors.forEach(el => el.style.border = "2px solid #000000");
+    eraserIcon.style.filter = "drop-shadow(0 0 2px var(--highlightclr))"
 }
 
 function disableErasing(){
     erasing = false
+    ctx.lineWidth = 10
     ctx.globalCompositeOperation = "source-over";
     eraserIcon.style.filter = ""
 }

@@ -33,5 +33,12 @@ def game():
 
     return render_template('game.html', metroinfo=metroInfo, metroname=city)
 
+@app.route('/score-calculation')
+def scoreCalculation():
+
+    score = 50
+
+    return score
+
 #running flask app
 app.run(host='0.0.0.0', port=81, debug=True)
