@@ -11,7 +11,6 @@
         <script src="../static/js/canvasDrawing.js" async defer></script>
         <script src="../static/js/lineEnds.js"></script>
         <script src="../static/js/screenshot.js" defer></script>
-        <script src="../static/js/html2canvas.min.js" defer></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
         </style>
@@ -25,6 +24,8 @@
             </div>  
         </header>
 
+        <div class="result"></div>
+
         <div id="game">
 
             <canvas id="gameCanvas">Your browser does not support the HTML canvas tag.</canvas>
@@ -36,8 +37,8 @@
                 </div>
 
                 <div id="submitArea">
-                    <input type="text" maxlength="30" placeholder="Name">
-                    <button>Submit</button>
+                    <input id="uNameInput" type="text" maxlength="30" placeholder="Name">
+                    <button onclick="submit()">Submit</button>
                     <!-- when submitted call function that screenshots canvas and sends the data in a POST request to the server, then in flask redirect to leaderboard with popup of how close they were -->
                 </div>
             </div>

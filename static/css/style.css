@@ -354,3 +354,9 @@ header>a{
     padding: 8px;
     background-color: var(--backgroundclr2);
 }
+
+#testImage{
+    position: fixed;
+    left: 10%;
+    top: 10%;
+}
