@@ -1,12 +1,13 @@
 const nameInput = document.getElementById("uNameInput")
 let image;
 
-let requestUrl = (window.location.href).substring(7)
-requestUrl = requestUrl.substring(0, requestUrl.indexOf("/")) + "/score-calculation"
+let url = (window.location.href).substring(7)
+url = url.substring(0, url.indexOf("/"))
+let requestUrl = url + "/score-calculation"
 
 
 
-function submit() {
+async function submit() {
     
   let image = document.getElementById("gameCanvas").toDataURL("image/png", 0.9);
 
@@ -33,11 +34,27 @@ function POSTdata(userName, solutionImage){
   })
   .then((response) => response.json())
   .then((data) => {
-    console.log("Success:", data);
-    return data
+    finishGame(data.score)
   })
   .catch((error) => {
     console.error("Error:", error);
     return error
   });
+}
+
+function finishGame(score){
+
+  const popUp = `
+  <div id="final">
+    <div id="result">
+        <h2>You Scored:</h2>
+        <h3>${score}%!</h3>
+        <button onclick="goHome()">Home</button>
+    </div>
+  </div>`
+  document.body.insertAdjacentHTML('afterbegin', popUp)
+}
+
+function goHome(){
+  window.location.href = `http://${url}`;
 }

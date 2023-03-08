@@ -41,7 +41,9 @@ def scoreCalculation():
         data = request.get_json()
         print(data)
 
-        return {"score": 50}
+        score = sc.calculateScore(data["solution"], data["metroName"])
+
+        return {"score": score}
 
 #running flask app
 app.run(host='0.0.0.0', port=81, debug=True)

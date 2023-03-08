@@ -295,6 +295,57 @@ header>a{
     border: 1px solid var(--backgroundclr2);
 }
 
+#result{
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    background-color: var(--backgroundclr2);
+    border-radius: 20px;
+    border: 1px solid var(--highlightclr);
+    animation: slideUpLoadAppear 1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#result>button{
+    color: var(--textclr);
+    background-color: var(--backgroundclr2);
+    border-radius: 7px;
+    border: 2px solid black;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px 8px;
+}
+
+#result>button:hover{
+    border-radius: 14px;
+    border: 2px solid var(--highlightclr);
+}
+
+#result>h2{
+    font-size: 35px;
+}
+
+#result>h3{
+    font-size: 28px;
+}
+
+#final{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loadAppear 1s ease-out;
+}
+
 /*leaderboard page css*/
 
 #leaderboard{
@@ -355,8 +406,24 @@ header>a{
     background-color: var(--backgroundclr2);
 }
 
-#testImage{
-    position: fixed;
-    left: 10%;
-    top: 10%;
+/* animations */
+
+@keyframes slideUpLoadAppear {
+    0%{
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+@keyframes loadAppear {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
 }
