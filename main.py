@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import dataHandling as dh
 import dataPrep as dp
 import scoreCalculation as sc
+import jsonInteraction as ji
 
 acceptedCities = ["newYork", "london", "singapore"]
 
@@ -33,15 +34,18 @@ def game():
 
     return render_template('game.html', metroinfo=metroInfo, metroname=city)
 
-@app.route('/score-calculation', methods=['GET', 'POST'])
+@app.route('/score-calculation', methods=['POST'])
 def scoreCalculation():
 
     if request.method == "POST":
 
         data = request.get_json()
-        print(data)
 
         score = sc.calculateScore(data["solution"], data["metroName"])
+
+        score = 66
+
+        #ji.updateLdrbData(data["metroName"], data["userName"], score)
 
         return {"score": score}
 

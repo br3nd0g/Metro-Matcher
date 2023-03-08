@@ -1,13 +1,13 @@
 import json
 
-def updateLdrbData(name, score):
+def updateLdrbData(metroName, name, score):
 
     file = open("./json/leaderboard.json", "r")
     jsonData = json.load(file)
     file.close()
 
-    post = {"name": name, "score": score}
-    jsonData["scores"].append(post)
+    log = {"name": name, "score": score}
+    jsonData[metroName].append(log)
 
     with open('./json/leaderboard.json', 'w') as outfile:
       json.dump(jsonData, outfile)
