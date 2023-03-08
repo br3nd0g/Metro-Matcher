@@ -302,7 +302,7 @@ header>a{
     background-color: var(--backgroundclr2);
     border-radius: 20px;
     border: 1px solid var(--highlightclr);
-    animation: slideUpLoadAppear 1s ease-out;
+    animation: slideUpLoadAppear 0.75s ease-out;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -343,7 +343,7 @@ header>a{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loadAppear 1s ease-out;
+    animation: loadAppear 0.75s ease-out;
 }
 
 /*leaderboard page css*/
