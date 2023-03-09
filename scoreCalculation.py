@@ -9,7 +9,6 @@ def calculateScore(userSolution, metroName):
     img = resizeImage(img)
     comparisonImg = getComparisonImage(metroName)
 
-
     simScore = ssim(img, comparisonImg, win_size=393, channel_axis=2)
 
     score = adjustToPercentage(simScore)
@@ -37,11 +36,9 @@ def resizeImage(image):
     return image
 
 def adjustToPercentage(ssimScore):
-
-    print(ssimScore)
+    
     stringScore = str(ssimScore)
     percentageString = stringScore[0:4].replace(".","")
-    percentage = int(percentageString)
-    print(percentage)
+    percentage = int(percentageString) * 10
 
     return percentage

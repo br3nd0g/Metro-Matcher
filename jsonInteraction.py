@@ -16,8 +16,6 @@ def getJsonData(fileName):
     
   file = open(f"./json/{fileName}.json", "r")
   jsonData = json.load(file)
-  #this converts it to a string (for js i think)
-  #jsonData = json.dumps(jsonData)
   file.close()
 
   return jsonData
