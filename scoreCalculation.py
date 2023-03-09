@@ -39,6 +39,13 @@ def adjustToPercentage(ssimScore):
     
     stringScore = str(ssimScore)
     percentageString = stringScore[0:4].replace(".","")
-    percentage = int(percentageString) * 10
+    percentage = int(percentageString)
+    
+    if percentage < 11:
+        percentage *= 10
+    elif percentage < 21:
+        percentage *= 5
+    else:
+        percentage *= 2.2
 
     return percentage

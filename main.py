@@ -43,7 +43,7 @@ def scoreCalculation():
 
         score = sc.calculateScore(data["solution"], data["metroName"])
 
-        #ji.updateLdrbData(data["metroName"], data["userName"], score)
+        ji.updateLdrbData(data["metroName"], data["userName"], score)
 
         return {"score": score}
 

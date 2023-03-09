@@ -64,6 +64,10 @@ header>a{
     width: 100%;
 }
 
+#howToPlay{
+    background-color: var(--backgroundclr2);
+}
+
 #primaryContent{
     width: 100%;
     display: flex;
@@ -144,7 +148,7 @@ header>a{
 
 .evenHowTo{
     flex-direction: row-reverse;
-    background-color: var(--backgroundclr2);
+    background-color: var(--backgroundclr);
 }
 
 #howToPlay>div>p{
@@ -346,6 +350,15 @@ header>a{
     animation: loadAppear 0.75s ease-out;
 }
 
+#cantPlay{
+    display:none;
+    width: calc(100% - 8%);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    padding: 0 4%;
+}
+
 /*leaderboard page css*/
 
 #leaderboard{
@@ -354,6 +367,7 @@ header>a{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 50px;
 }
 
 #leaderboardHeader{
@@ -425,5 +439,132 @@ header>a{
     }
     100%{
       opacity: 1;
+    }
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 1000px) {
+
+    #howToPlay>h1{
+        margin-left: 4%;
+    }
+
+    #howToPlay>div>p{
+        font-size: 18px;
+    }
+
+    #howToPlay>div>img{
+        width: 300px;
+    }
+
+    #primaryContent>p{
+        width: 450px;
+        font-size: 24px;
+    }
+
+    .lineStop{
+        width: 18px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #howToPlay>h1{
+        font-size: 40px;
+    }
+
+    #howToPlay>div>p{
+        font-size: 18px;
+        width: 40%;
+    }
+
+    #howToPlay>div>img{
+        width: 250px;
+    }
+
+    #primaryContent>p{
+        width: 400px;
+        font-size: 18px;
+    }
+
+    #links{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #leaderTable{
+        width: 80%;
+    }
+
+    #linesInfo{
+        padding: 0 2%;
+        width: calc(100% - 4%);
+    }
+
+    #gameCanvas, #toolbar{
+        width: 485px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    
+    #primaryContent>p{
+        width: 80%;
+        font-size: 17px;
+        padding: 0;
+        margin: 30px 0;
+    }
+
+    #primaryContent{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #howToPlay>div{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #howToPlay{
+        margin-bottom: 20px;
+    }
+
+    #howToPlay>h1{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #howToPlay>div>p{
+        font-size: 18px;
+        width: 75%;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    #howToPlay>div>img{
+        width: 65%;
+    }
+
+    #game{
+        display: none;
+    }
+
+    #cantPlay{
+        display:block;
+    }
+
+    header>a{
+        font-size: 35px;
+        width: 150px;
+    }
+
+    #links>a{
+        font-size: 20px;
     }
 }
