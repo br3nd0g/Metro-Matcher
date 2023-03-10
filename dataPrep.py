@@ -1,5 +1,6 @@
 import json
 
+#takes the metro class and transforms it (back) in to json format, so that javascript can read it
 def prepMetroForJs(metroRecord):
 
     metroJson = []
@@ -17,6 +18,7 @@ def prepMetroForJs(metroRecord):
 
     return metroJson
 
+#takes the leaderboard dictoonary full of leaderboardLog classes and transforms it (back) in to json format, so that javascript can read it
 def prepLeaderForJs(leaderboardDict):
 
     dataForJs = {}
